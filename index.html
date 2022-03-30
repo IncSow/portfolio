@@ -1,0 +1,157 @@
+<!DOCTYPE html lang="fr">
+<html lang="fr">
+<head>
+<title>Portfolio LïLo</title>
+<meta name="keywords" content="portfoliolilo, portfolio lilo, LiLo, Developpeur, dev, web, site web, html, css, js, JavaScript, Vue js, dev freelance, créer site">
+<meta name="description" content="WebDev en 2éme année - Recherche des contrat Freelance.">
+<meta charset="UTF-8">
+<meta name="author" content="LïLo">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/jpg" href="/media/favicon.jpg" />
+</head>
+<body>
+
+    <wrapper id='app'>
+    
+        <header class="container-fluid mt-2 mt-md-3">
+                <hgroup class="ms-0 ms-lg-5 mt-1 mt-lg-5 row centered">
+                    <h2>"LïLo"</h2>
+                    <h1 class="text-center" v-if="page=='main' || page=='intro' ">WebDev - B2 à l'ESD Paris</h1>
+                    <button @click="change_page('main')" class="text-center back-button" v-else>Retour au sommaire</button>
+                </hgroup>
+            
+                <section class="row me-0 me-lg-5 mt-4">
+                    <a class="col-12 centered " onclick="go_to_page(this)" data-link="https://github.com/IncSow"> <img class="menu-img" src="/media/Icon awesome-github-square.svg" alt="github's icon"> </a>
+                    
+                </section>
+            
+        </header>
+
+        <nav class="centered" style="flex-direction:column;">
+
+
+
+
+            <section  v-if="page =='intro' " class="centered candy unselectable" id='intro'>
+                <span  @click="change_page('main')" id="play-span" class="centered">  <img src="media/play-button.png" class="play-button" alt="icon of a play button">  <span id="start-span">Démarrer la visite</span> </span>
+            </section>
+
+
+            
+            
+                <div class="container-fluid mt-5">
+                    <div class="row centered">
+                        <transition name="come-left" >   
+                            <section @click="change_page('skills')" v-if="page == 'main'" class="centered candy unselectable col-8 col-lg-3" >
+                                <span class="centered"> Compétences </span>
+                            </section>    
+                        </transition>
+
+
+                        <transition name="come-up">
+                            <section @click="change_page('projects')" v-if="page== 'main'" class="centered candy unselectable col-8 col-lg-3" >
+                                <span  class="centered">Projets</span> 
+                            </section> 
+                        </transition>
+                
+
+                        <transition name="come-right">
+                            <section  @click="change_page('about_me')" v-if="page=='main'" class="centered candy unselectable col-8 col-lg-3"  >
+                                <span  class="centered">À propos</span>
+                            </section> 
+                        </transition>
+                    </div>
+                </div>
+         
+
+                <transition name="appearin">
+                    <footer v-if="page=='main'" id="contacts" class="centered mb-5">
+                        <div class="candy centered" onclick="CopyToClipboard()">
+                            <h3>Me contacter:</h3>
+                            <p class="email">helynt@dsifrance.fr</p>
+                        </div>
+                    </footer>
+                </transition>
+
+                <transition name="appearskill">
+                    <div v-if="page=='projects'"class="projects centered container about_me">
+                        <div class="centered project_state mb-3">
+                            <button class="centered" @click="updateCurrentProject('-')">Précédent</button> <span class="centered">Projet:<br>
+                            <select @change="selectOtherProject()" name="projectSelect" id="projectSelector">
+                                <option v-for="project in projects" :value="project.id"> {{project.id}}</option>
+                            </select>
+                        
+                        </span> <button class="centered" @click="updateCurrentProject('+')"> Suivant</button>
+                        </div>
+                        <div class="row centered" style="flex-direction: row;">
+                            
+                           
+                            <div class="col-12 col-lg-4 centered flex-column">
+                                <h2 class="text-center project_name">{{ projects[current_project].name }}</h2>
+                                <a style="width: 40%;" :href="projects[current_project].link" class="centered"><img style="width: 100%;"class="project_img":src="projects[current_project].mainImg" :alt="projects[current_project].name"> </a>
+                                <button class="mt-4 mb-md-5" id="project_link" v-if="projects[current_project].link"> <a :href="projects[current_project].link" target="_blank">Visiter le site</a> </button>
+                            </div>
+
+                            <div class="col-12 col-lg-8 centered flex-column">
+                                <h3 id="project_description"class="text-center my-3">{{ projects[0].description }}</h3>
+                                <section class="centered skills_needed">
+                                    <img v-for="skill in projects[current_project].skills.skills_needed" :src="skill.img" :alt="skill.name">
+                                </section>
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                </transition>
+
+
+
+                <transition name="appearskill">
+                    <div v-if="page=='skills'" class="container test1 unselectable">
+                        <div class="row" style="margin-top:-5vh">
+                            <section v-for="skill in skills" class="col-6 col-lg-3 m1">
+                                <div class="skill centered">
+                                    <img :src="skill.img_url" :alt="skill.name">
+                                    <h2>{{skill.name}}</h2>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </transition>
+            
+
+                <transition name="appearabbout">
+                    <div v-if="page=='about_me'" class="about_me centered" >
+                        <hgroup>
+                            <h4 class="text-center">Je suis élève à l'ESD - L'École Supérieure du Digital et actuellement en 2éme année en bachelor Chef de Projet Digital, je me spécialise dans le développement web (html/css/js) et ce qui entoure le <em>datascrapping</em> ainsi que la création de bots en Python.</h4>
+                            <h4 class="text-center">Je me forme en autodidacte et sais donc me documenter sans avoir besoin de supervision. De plus, je suis capable de travailler en équipe avec aisance, en anglais comme en français.</h4>
+                        </hgroup>
+                        <button> <a href="media/CV - Anonymisé.pdf" download="CV LiLo"> télécharger mon cv</a></button>
+                    </div>
+                </transition>
+
+
+                <p id="copied">
+                    Texte copié dans le presse-papier
+                </p>
+                      
+        </nav>
+       
+
+    </wrapper>
+
+        
+
+    <div id="background-image-container">
+        <div id="background"></div>
+    </div>
+   
+    <script src="/vue.min.js"></script>
+    <script src="vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
