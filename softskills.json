@@ -1,49 +1,38 @@
 [
     {
       "id": 1,
-      "name": "Python",
+      "name": "Anglais",
       "img_url":"/media/python.svg"
     },
     {
       "id": 2,
-      "name": "HTML",
+      "name": "Français",
       "img_url":"/media/html.svg"
     },
     {
       "id": 3,
-      "name": "CSS",
+      "name": "Traduction",
       "img_url":"/media/css.svg"
     },
     {
       "id": 4,
-      "name": "JavaScript",
+      "name": "Aisance à l'oral",
       "img_url":"/media/javascript.svg"
     },
     {
       "id": 5,
-      "name": "Vue.js 3",
+      "name": "Travail de groupe",
       "img_url":"/media/Vue-logo-1.png"
     },
     {
       "id": 6,
-      "name": "Wordpress",
+      "name": "Pédagogie",
       "img_url":"/media/wordpress.svg"
     },
     {
         "id": 7,
-        "name": "GitHub",
+        "name": "Apprentissage en autodidacte",
         "img_url":"/media/github.svg"
-    },
-    {
-        "id" : 8,
-        "name": "SQLite",
-        "img_url":"/media/sqlite.png"
-    },
-    {
-        "id" : 9,
-        "name": "PHP",
-        "img_url":"/media/027-php.svg"
     }
-
     
   ]

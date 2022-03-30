@@ -4,23 +4,35 @@ new Vue({
     data: {
         page: 'intro',
         skills: [],
+        softskills: [],
         projects : [],
         current_project : 0,
+        isSoftSkills : false,
         InExecution : false
     },
     mounted(){
         this.getSkillsDataList()
         this.getProjectsDataList()
+        this.getsoftSkillsDataList()
     },
     methods: {
         change_page(page){
             this.page = page;
         },
+        toggle_skills(arg){
+            this.isSoftSkills = arg
+        }
+        ,
 
         getSkillsDataList(){
             fetch("skills.json")
             .then(response => response.json())
             .then(data => (this.skills = data));
+        },
+        getsoftSkillsDataList(){
+            fetch("softskills.json")
+            .then(response => response.json())
+            .then(data => (this.softskills = data));
         },
         getProjectsDataList(){
             fetch("projects.json")
@@ -76,8 +88,3 @@ new Vue({
 
 
 
-
-let jsonString = ""
-fetch("projects.json")
-            .then(response => response.json())
-            .then(data => (jsonString = data));

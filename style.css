@@ -9,29 +9,26 @@ body{
     padding: 0%;
     background: #04001A;
 }
+.button-rounded{
+    background: #0a013d27;
+    border: none;
+    border-radius: 20px;
+    transition: 0.5s;
+    animation: button_breath 2s infinite ease alternate;
+    color: whitesmoke;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    min-height: 1vh;
+    min-width: 8vw;
+    font-size: 1rem;
+    padding: 10px;
+}
 
-
-::-webkit-scrollbar {
-    width: 3px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #04001A;
-    width: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(77, 71, 71); 
-    border-radius: 50px;
-    box-shadow: 0px 10px 10px #8d5cff6e, 10px 0px 10px #ffe38899, 0px -10px 10px #ff616b85, -10px 1px 10px #80c8ff8a;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+.button-rounded:hover{
+    background: lightgray;
+    color: #04001A;
+    text-shadow: #04001a -2px 2px 10px;
+}
 
 .centered{
     display: flex;
@@ -94,14 +91,12 @@ nav{
 }
 
 .candy:hover>span, #contacts>.candy:hover>a, #contacts>.candy:hover>h3,#contacts>.candy:hover>p, .about_me>button:hover>a,.about_me>button:focus>a{
-    color: #04001A;
+    color: #04001a;
     text-shadow: #04001a -2px 2px 10px;
 }
 .menu-img{
     filter:  brightness(0) invert(0.75) drop-shadow(-1px 1px 3px);
-
 }
-
 .menu-img:hover, .menu-img:focus{
     filter:  brightness(0) invert(1) drop-shadow(-1px 1px 3px);
     cursor: pointer;
@@ -174,11 +169,10 @@ body{
     pointer-events: all;
     margin: 3%;
     padding: 10px !important;
-    filter: blur(5px);
 }
 
 .skill:hover{
-    filter: none;
+    filter: drop-shadow(0px 0px 5px red);
     box-shadow: rgb(255 255 255 / 25%) 0px 30px 60px -12px, rgb(255 255 255 / 30%) 0px 18px 36px -18px;
     cursor: pointer;
     text-shadow: none;
@@ -767,27 +761,7 @@ hgroup>h1, hgroup>h2{
 }
 
 
-.project_state>button{
-    background: #0a013d27;
-    border: none;
-    border-radius: 20px;
-    transition: 0.5s;
-    animation: button_breath 2s infinite ease alternate;
-    color: whitesmoke;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    height: 3vh;
-    width: 8vw;
-    font-size: 1rem;
-    padding: 10px;
-}
 
-
-.project_state>button:hover,.project_state>button:focus,.project_state>button:focus, #project_link:hover,  #project_link:focus{
-    background: lightgray;
-    color: #04001A;
-    text-shadow: #04001a -2px 2px 10px;
-}
 #project_link>a{
     text-decoration: none;
     color: inherit;
@@ -828,7 +802,7 @@ img[alt="logo python"]{
 
 
 
-@media (max-width: 1400px) and (min-width: 1000px){
+@media (max-width: 1400px) and (min-width: 1000px){ /*  */
     .project_name, #project_description, .project_state>span{
         color: lightgray;
         font-size: 1rem;
@@ -857,3 +831,29 @@ img[alt="logo python"]{
     transition: 1.2s opacity;
     display: none;
 }
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #04001A;
+    width: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(77, 71, 71); 
+    border-radius: 50px;
+    box-shadow: 0px 10px 10px #8d5cff6e, 10px 0px 10px #ffe38899, 0px -10px 10px #ff616b85, -10px 1px 10px #80c8ff8a;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
