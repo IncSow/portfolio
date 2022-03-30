@@ -2,17 +2,17 @@
     {
       "id": 1,
       "name": "Anglais",
-      "img_url":"/media/python.svg"
+      "img_url":"/media/english.png"
     },
     {
       "id": 2,
       "name": "Français",
-      "img_url":"/media/html.svg"
+      "img_url":"/media/french.png"
     },
     {
       "id": 3,
       "name": "Traduction",
-      "img_url":"/media/css.svg"
+      "img_url":"/media/translation.png"
     },
     {
       "id": 4,
