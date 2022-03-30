@@ -111,14 +111,20 @@
 
                 <transition name="appearskill">
                     <div v-if="page=='skills'" class="container test1 unselectable">
-                        <div class="centered skill_type" style="margin-top: -18vh"><button class="button-rounded"  :class="{ activeButtonRounded: isSoftSkills==false }" @click="toggle_skills(false)">Hard skills</button><button class="button-rounded" :class="{ activeButtonRounded: isSoftSkills }" @click="toggle_skills(true)">Soft skills</button></div>
+
+                        <div class="centered skill_type" style="margin-top: -10vh">
+                                <button class="button-rounded"  :class="{ activeButtonRounded: isSoftSkills==false }" @click="toggle_skills(false)">Hard skills</button>
+                                <button class="button-rounded" :class="{ activeButtonRounded: isSoftSkills }" @click="toggle_skills(true)">Soft skills</button>
+                        </div>
+
                         <div class="row centered mt-4">
-                            <section v-if="isSoftSkills == false" v-for="skill in skills" class="col-6 col-lg-3 m1">
-                                <div class="skill centered">
-                                    <img :src="skill.img_url" :alt="skill.name">
-                                    <h2>{{skill.name}}</h2>
-                                </div>
-                            </section>
+                            
+                                <section v-if="isSoftSkills == false" v-for="skill in skills" class="col-6 col-lg-3 m1">
+                                    <div class="skill centered">
+                                        <img :src="skill.img_url" :alt="skill.name">
+                                        <h2>{{skill.name}}</h2>
+                                    </div>
+                                </section>
 
                             <section v-if="isSoftSkills == true" v-for="softskill in softskills" class="col-6 col-lg-3 m1">
                                 <div class="skill centered">
@@ -127,7 +133,9 @@
                                     <p v-if="softskill.detail">{{softskill.detail}}</p>
                                 </div>
                             </section>
+
                         </div>
+
                     </div>
                 </transition>
             
@@ -135,10 +143,10 @@
                 <transition name="appearabbout">
                     <div v-if="page=='about_me'" class="about_me centered" >
                         <hgroup>
-                            <h4 class="text-center">Je suis élève à l'ESD - L'École Supérieure du Digital et actuellement en 2éme année en bachelor Chef de Projet Digital, je me spécialise dans le développement web (html/css/js) et ce qui entoure le <em>datascrapping</em> ainsi que la création de bots en Python.</h4>
-                            <h4 class="text-center">Je me forme en autodidacte et sais donc me documenter sans avoir besoin de supervision. De plus, je suis capable de travailler en équipe avec aisance, en anglais comme en français.</h4>
+                            <h4 class="text-center">Je suis élève à l'ESD - L'École Supérieure du Digital - et actuellement en 2éme année en bachelor Chef de Projet Digital, je me spécialise dans le développement web (html/css/js/php) et ce qui entoure le <em>datascrapping</em> ainsi que la création de bots en Python.</h4>
+                            <h4 class="text-center">Ma spécialisation est le développement Front-end mais je souhaite améliorer mes compétences en back-end afin d'accéder à des postes de dev fullstack.</h4>
                         </hgroup>
-                        <button> <a href="media/CV - Anonymisé.pdf" download="CV LiLo"> télécharger mon cv</a></button>
+                        <button> <a href="media/CV - Anonymisé.pdf" download="CV LiLo"> Télécharger mon cv</a></button>
                     </div>
                 </transition>
 

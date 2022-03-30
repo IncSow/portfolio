@@ -563,6 +563,13 @@ hgroup>h1, hgroup>h2{
 .appearskill-enter-active{
     animation: TESTCOME 2s ease;
 }
+.blur-enter-active{
+    filter: blur(0px);
+}
+.blurappear-leave-active{
+    filter: blur(15px);
+}
+
 
 
 
@@ -760,9 +767,11 @@ hgroup>h1, hgroup>h2{
     font-size: 1.5rem;
     text-shadow: 0px 10px 10px #8d5cff6e, 10px 0px 10px #ffe38899, 0px -10px 10px #ff616b85, -10px 1px 10px #80c8ff8a;
 }
-#project_description{
+/* #project_description{
     line-height: 1.4 !important;
-}
+} */
+
+
 #projectSelector{
     background-color: transparent;
     text-align: center;
@@ -782,10 +791,7 @@ hgroup>h1, hgroup>h2{
 
 
 
-#project_link>a{
-    text-decoration: none;
-    color: inherit;
-}
+
 .skills_needed{
     width: 50%;
     justify-content: space-evenly;
