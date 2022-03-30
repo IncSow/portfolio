@@ -129,7 +129,7 @@ body{
     padding: 10px;
 }
 
-.button-rounded:hover{
+.button-rounded:hover, .activeButtonRounded{
     background: lightgray;
     color: #04001A;
     text-shadow: #04001a -2px 2px 10px;

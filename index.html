@@ -111,7 +111,7 @@
 
                 <transition name="appearskill">
                     <div v-if="page=='skills'" class="container test1 unselectable">
-                        <div class="centered skill_type" style="margin-top: -18vh"><button class="button-rounded" id="{active-button-rounded : isSoftSkills}" @click="toggle_skills(false)">Hard skills</button><button class="button-rounded" @click="toggle_skills(true)">Soft skills</button></div>
+                        <div class="centered skill_type" style="margin-top: -18vh"><button class="button-rounded"  :class="{ activeButtonRounded: isSoftSkills==false }" @click="toggle_skills(false)">Hard skills</button><button class="button-rounded" :class="{ activeButtonRounded: isSoftSkills }" @click="toggle_skills(true)">Soft skills</button></div>
                         <div class="row centered mt-4">
                             <section v-if="isSoftSkills == false" v-for="skill in skills" class="col-6 col-lg-3 m1">
                                 <div class="skill centered">

@@ -17,22 +17,22 @@
     {
       "id": 4,
       "name": "Aisance à l'oral",
-      "img_url":"/media/javascript.svg"
+      "img_url":"/media/oral.png"
     },
     {
       "id": 5,
       "name": "Travail de groupe",
-      "img_url":"/media/Vue-logo-1.png"
+      "img_url":"/media/teamwork.png"
     },
     {
       "id": 6,
       "name": "Pédagogie",
-      "img_url":"/media/wordpress.svg"
+      "img_url":"/media/books.png"
     },
     {
         "id": 7,
         "name": "Apprentissage en autodidacte",
-        "img_url":"/media/github.svg"
+        "img_url":"/media/books.png"
     }
     
   ]
