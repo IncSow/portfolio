@@ -142,10 +142,20 @@
 
                 <transition name="appearabbout">
                     <div v-if="page=='about_me'" class="about_me centered" >
-                        <hgroup>
+                        <!-- <hgroup>
                             <h4 class="text-center">Je suis élève à l'ESD - L'École Supérieure du Digital - et actuellement en 2éme année en bachelor Chef de Projet Digital, je me spécialise dans le développement web (html/css/js/php) et ce qui entoure le <em>datascrapping</em> ainsi que la création de bots en Python.</h4>
                             <h4 class="text-center">Ma spécialisation est le développement Front-end mais je souhaite améliorer mes compétences en back-end afin d'accéder à des postes de dev fullstack.</h4>
-                        </hgroup>
+                        </hgroup> -->
+                        <div id="experiences" class="justify-content-around w-100 centered">
+                            <div class="centered flex-column">
+                                <h2 class="project_name">Lorem, ipsum dolor.</h2> <!--Intitulé du poste-->
+                                <img src="/media/027-php.svg" alt="" class="company_logo project_image"> <!--Logo entreprise-->
+                            </div>
+                            <div class="flex-column centered">
+                                <h3 id="project_description"> Mai 2020 - Avril 2021</h3> <!--Durée-->
+                                <p id="project_description">Création site web social media</p> <!--Description du poste.-->
+                            </div>
+                        </div>
                         <button> <a href="media/CV - Anonymisé.pdf" download="CV LiLo"> Télécharger mon cv</a></button>
                     </div>
                 </transition>

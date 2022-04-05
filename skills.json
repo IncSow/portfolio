@@ -1,10 +1,5 @@
 [
     {
-      "id": 1,
-      "name": "Python",
-      "img_url":"/media/python.svg"
-    },
-    {
       "id": 2,
       "name": "HTML",
       "img_url":"/media/html.svg"
@@ -25,15 +20,17 @@
       "img_url":"/media/Vue-logo-1.png"
     },
     {
-      "id": 6,
-      "name": "Wordpress",
-      "img_url":"/media/wordpress.svg"
-    },
-    {
-        "id": 7,
-        "name": "GitHub",
-        "img_url":"/media/github.svg"
-    },
+      "id" : 10,
+      "name": "Angular",
+      "img_url":"/media/angular.png"
+  },
+  {
+    "id": 7,
+    "name": "GitHub",
+    "img_url":"/media/github.svg"
+  },
+    
+    
     {
         "id" : 8,
         "name": "SQLite",
@@ -43,6 +40,16 @@
         "id" : 9,
         "name": "PHP",
         "img_url":"/media/027-php.svg"
+    },
+    {
+      "id": 1,
+      "name": "Python",
+      "img_url":"/media/python.svg"
+    },
+    {
+      "id": 6,
+      "name": "Wordpress",
+      "img_url":"/media/wordpress.svg"
     }
 
     
