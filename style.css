@@ -28,7 +28,7 @@ body{
         filter: grayscale(0) brightness(100%) !important;
     }
 
-    .project_name, #project_description, .project_state>span{
+    .project_name, .text-shadow-white, .project_state>span{
         font-size: 1rem !important;
     }
 
@@ -762,12 +762,12 @@ hgroup>h1, hgroup>h2{
 }
 
 
-.project_name, #project_description, .project_state>span, #projectSelector{
+.project_name, .text-shadow-white, .project_state>span, #projectSelector{
     color: lightgray;
     font-size: 1.5rem;
     text-shadow: 0px 10px 10px #8d5cff6e, 10px 0px 10px #ffe38899, 0px -10px 10px #ff616b85, -10px 1px 10px #80c8ff8a;
 }
-/* #project_description{
+/* .text-shadow-white{
     line-height: 1.4 !important;
 } */
 
@@ -829,7 +829,7 @@ img[alt="logo python"]{
 
 
 @media (max-width: 1400px) and (min-width: 1000px){ /*  */
-    .project_name, #project_description, .project_state>span{
+    .project_name, .text-shadow-white, .project_state>span{
         color: lightgray;
         font-size: 1rem;
         text-shadow: 0px 10px 10px #8d5cff6e, 10px 0px 10px #ffe38899, 0px -10px 10px #ff616b85, -10px 1px 10px #80c8ff8a;
