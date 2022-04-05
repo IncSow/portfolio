@@ -1,10 +1,10 @@
 [
     {
         "id": 1,
-        "name": "Chef de projet digital et Développeur web",
+        "name": "Stage de Chef de projet digital et Développeur web",
         "mainImg":"/media/Accor.png",
-        "link": "/",
-        "description":"- Étude des besoins <+- Création du site web https://csesmi.fr/ et https://fo.csavigny.fr/<+- Mise en place d'une boutique en ligne<+- Mise en ligne d'une solution de dépôt de document.<+- Formation des utilisateurs à l'utilisation des fonctionnalités du site.<+- Animation de réseaux sociaux<+- Maintenance et support du site",
+        "dates": "Février 2021 - Avril 2021",
+        "description":"- Étude des besoins <- Création du site web https://csesmi.fr/ et https://fo.csavigny.fr/<- Mise en place d'une boutique en ligne<- Mise en ligne d'une solution de dépôt de document.<- Formation des utilisateurs à l'utilisation des fonctionnalités du site.<- Animation de réseaux sociaux<- Maintenance et support du site",
         "skills": {
           "skills_needed": [
               { "name": "logo html", "img": "/media/html.svg" },
@@ -16,43 +16,16 @@
     },
     {
       "id": 2,
-      "name": "Création du site 'csesmi.fr' pour le CSE d'Accor SMI",
-      "mainImg":"/media/wordpress.svg",
-      "link": "https://www.csesmi.fr/",
-      "description":"Lors de mon premier stage de deux mois, j'avais pour mission de créer le site du CSE d'Accor SMI, à l'aide de WordPress, de beaucoup de CSS et de Woocommerce. De plus, j'avais aussi pour mission de former leurs équipes à l'utilisation du-dit site (Gestion d'articles, support à faire, gérer les commandes). <+Enfin, j'assure désormais la maintenance, le support et la vie du site en freelance pour Accor SMI].",
+      "name": "Freelance - Maintenance et support du site csesmi.fr",
+      "mainImg":"/media/Accor.png",
+      "dates": "Avril 2021 - Maintenant",
+      "description":"- Maintenance et mise à jour du site CSE SMI<- Publication d'articles<- Support",
       "skills": {
         "skills_needed": [
-            { "name": "logo css3", "img": "/media/css.svg" },
             { "name": "logo wordpress", "img": "/media/wordpress.svg" }
         ]
-    }
-    },
-    {
-      "id": 3,
-      "name": "Création d'un site au style Matrix",
-      "mainImg":"/media/logo.png",
-      "link": "https://hackervase.netlify.app/",
-      "description":"J'avais comme consigne de transformer un objet banal en accesoire de hacker. J'ai pu utiliser ce projet pour apprendre à me servir correctement des elements ::before et ::after. Le responsive n'a pas encore été paufiné car le temps de rendu du projet était court.",
-      "skills": {
-        "skills_needed": [
-            { "name": "logo html", "img": "/media/html.svg" },
-            { "name": "logo css3", "img": "/media/css.svg" },
-            { "name": "logo javascript", "img": "/media/javascript.svg" }
-        ]
       }
-  },
-  {
-    "id":4,
-    "name": "Création d'un bot discord",
-    "mainImg":"/media/python.svg",
-    "description":"Afin d'approfondir mes connaissances en python, j'ai décidé de créer un bot discord. Ce dernier permettait d'afficher des images venant d'un lien instagram (via Selenium) et de permettre à chaque administrateur de définir des mots à bannir sur leurs serveurs. Afin de garder en mémoire chaque configuration et listes de mots à bannir de chaque serveur, une base de données en SQLite a été mise en place et le code a été pensé afin d'éviter les injections SQL.",
-    "skills": {
-      "skills_needed": [
-          { "name": "logo python", "img": "/media/python.svg" },
-          { "name": "logo sqlite", "img": "/media/sqlite.png" }
-      ]
     }
-}
 
      
   ]

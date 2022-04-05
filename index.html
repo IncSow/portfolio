@@ -163,11 +163,11 @@
                             <div class="col-12 col-lg-4 centered flex-column">
                                 <h2 class="text-center project_name">{{ experiences[current_experience].name }}</h2>
                                 <a style="width: 40%;" :href="experiences[current_experience].link" class="centered"><img style="width: 100%;"class="project_img":src="experiences[current_experience].mainImg" :alt="experiences[current_experience].name"> </a>
-                                <a :href="experiences[current_experience].link" target="_blank"><button class="mt-4 mb-md-5 button-rounded" v-if="experiences[current_experience].link"> Visiter le site</button></a> 
+                                <p class="text-shadow-white">{{ experiences[current_experience].dates }}</p>
                             </div>
 
                             <div class="col-12 col-lg-8 centered flex-column">
-                                <h5 id="experience_description"class="text-center my-3 text-shadow-white">- Étude des besoins <br> Création du site web https://csesmi.fr/ et https://fo.csavigny.fr/<br> Mise en place d'une boutique en ligne<br> Mise en ligne d'une solution de dépôt de document.<br> Formation des utilisateurs à l'utilisation des fonctionnalités du site.<br> Animation de réseaux sociaux<br> Maintenance et support du site</h3>
+                                <h5 id="experience_description"class="text-center my-3 text-shadow-white">- Étude des besoins <br> - Création du site web https://csesmi.fr/ et https://fo.csavigny.fr/<br> - Mise en place d'une boutique en ligne<br> - Mise en ligne d'une solution de dépôt de document.<br> - Formation des utilisateurs à l'utilisation des fonctionnalités du site.<br> - Animation de réseaux sociaux<br> - Maintenance et support du site</h3>
                                 <section class="centered skills_needed">
                                     <img v-for="skill in experiences[current_experience].skills.skills_needed" :src="skill.img" :alt="skill.name">
                                 </section>
