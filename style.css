@@ -762,7 +762,7 @@ hgroup>h1, hgroup>h2{
 }
 
 
-.project_name, .text-shadow-white, .project_state>span, #projectSelector{
+.project_name, .text-shadow-white, .project_state>span, .IndexSelector{
     color: lightgray;
     font-size: 1.5rem;
     text-shadow: 0px 10px 10px #8d5cff6e, 10px 0px 10px #ffe38899, 0px -10px 10px #ff616b85, -10px 1px 10px #80c8ff8a;
@@ -772,7 +772,7 @@ hgroup>h1, hgroup>h2{
 } */
 
 
-#projectSelector{
+.IndexSelector{
     background-color: transparent;
     text-align: center;
     width: 2.5em;
@@ -782,7 +782,7 @@ hgroup>h1, hgroup>h2{
     cursor: pointer;
     transition: .5s
 }
-#projectSelector:focus{
+.IndexSelector:focus{
     color: red !important;
 }
 .project_state>span{
