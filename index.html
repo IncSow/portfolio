@@ -77,6 +77,13 @@
 
                 <transition name="appearskill">
                     <div v-if="page=='projects'"class="projects centered container about_me">
+                        <div class="centered mb-5 mt-2">
+                            <button class="button-rounded"  :class="{ activeButtonRounded: isWorkExperience==false }" @click="toggle_skills(false)">Projets profesionnelles</button>
+                            <button class="button-rounded" :class="{ activeButtonRounded: isWorkExperience }" @click="toggle_skills(true)">Expériences profesionnelles</button>
+                    </div>
+                        
+                        <div v-if="isWorkExperience == false">
+
                         <div class="centered project_state mb-3">
                             <button class="centered button-rounded" @click="updateCurrentIndex('-')">Précédent</button> <span class="centered">Projet:<br>
                             <select @change="selectOtherIndex()" name="projectSelect" class="IndexSelector" id="projectSelector">
@@ -85,6 +92,7 @@
                         
                         </span> <button class="centered button-rounded" @click="updateCurrentIndex('+')"> Suivant</button>
                         </div>
+                        <
                         <div class="row centered" style="flex-direction: row;">
                             
                            
@@ -102,7 +110,37 @@
                             </div>
 
                             
+                            </div>
                         </div>
+                            <div id="experiences" v-if="isWorkExperience == true" class="justify-content-evenly w-100 centered flex-column">
+
+                                <div class="centered project_state mb-3">
+                                    <button class="centered button-rounded" @click="updateCurrentIndex('-')">Précédent</button> <span class="centered">Projet:<br>
+                                    <select @change="selectOtherIndex()" name="experienceSelect" class="IndexSelector" id="experienceSelector">
+                                        <option v-for="experience in experiences" :value="experience.id" > {{experience.id}}</option>
+                                    </select>
+                                
+                                </span> <button class="centered button-rounded" @click="updateCurrentIndex('+')"> Suivant</button>
+                                </div>
+                                <div class="row centered" style="flex-direction: row;">
+                                    
+                                   
+                                    <div class="col-12 col-lg-4 centered flex-column">
+                                        <h2 class="text-center project_name">{{ experiences[current_experience].name }}</h2>
+                                        <a style="width: 40%;" :href="experiences[current_experience].link" class="centered"><img style="width: 100%;"class="project_img":src="experiences[current_experience].mainImg" :alt="experiences[current_experience].name"> </a>
+                                        <p class="text-shadow-white">{{ experiences[current_experience].dates }}</p>
+                                    </div>
+        
+                                    <div class="col-12 col-lg-8 centered flex-column">
+                                        <h5 id="experience_description"class="text-center my-3 text-shadow-white">- Étude des besoins <br> - Création du site web https://csesmi.fr/ et https://fo.csavigny.fr/<br> - Mise en place d'une boutique en ligne<br> - Mise en ligne d'une solution de dépôt de document.<br> - Formation des utilisateurs à l'utilisation des fonctionnalités du site.<br> - Animation de réseaux sociaux<br> - Maintenance et support du site</h3>
+                                        <section class="centered skills_needed">
+                                            <img v-for="skill in experiences[current_experience].skills.skills_needed" :src="skill.img" :alt="skill.name">
+                                        </section>
+                                    </div>
+                                    
+                            </div>
+    
+
                         
                     </div>
                 </transition>
@@ -142,40 +180,14 @@
 
                 <transition name="appearabbout">
                     <div v-if="page=='about_me'" class="about_me centered" >
-                        <!-- <hgroup>
+                        
+                        <hgroup class="mb-3" >
                             <h4 class="text-center">Je suis élève à l'ESD - L'École Supérieure du Digital - et actuellement en 2éme année en bachelor Chef de Projet Digital, je me spécialise dans le développement web (html/css/js/php) et ce qui entoure le <em>datascrapping</em> ainsi que la création de bots en Python.</h4>
                             <h4 class="text-center">Ma spécialisation est le développement Front-end mais je souhaite améliorer mes compétences en back-end afin d'accéder à des postes de dev fullstack.</h4>
-                        </hgroup> -->
-                        <!-- <a href="media/CV - Anonymisé.pdf" download="CV LiLo"><button class="button-rounded">  Télécharger mon cv</button></a> -->
-                        <div id="experiences" class="justify-content-evenly w-100 centered flex-column">
-
-                        <div class="centered project_state mb-3">
-                            <button class="centered button-rounded" @click="updateCurrentIndex('-')">Précédent</button> <span class="centered">Projet:<br>
-                            <select @change="selectOtherIndex()" name="experienceSelect" class="IndexSelector" id="experienceSelector">
-                                <option v-for="experience in experiences" :value="experience.id" > {{experience.id}}</option>
-                            </select>
+                        </hgroup>
+                        <a href="media/CV - Anonymisé.pdf"  v-if="isWorkExperience == false" download="CV LiLo"><button class="button-rounded">  Télécharger mon cv</button></a>
                         
-                        </span> <button class="centered button-rounded" @click="updateCurrentIndex('+')"> Suivant</button>
-                        </div>
-                        <div class="row centered" style="flex-direction: row;">
-                            
-                           
-                            <div class="col-12 col-lg-4 centered flex-column">
-                                <h2 class="text-center project_name">{{ experiences[current_experience].name }}</h2>
-                                <a style="width: 40%;" :href="experiences[current_experience].link" class="centered"><img style="width: 100%;"class="project_img":src="experiences[current_experience].mainImg" :alt="experiences[current_experience].name"> </a>
-                                <p class="text-shadow-white">{{ experiences[current_experience].dates }}</p>
-                            </div>
-
-                            <div class="col-12 col-lg-8 centered flex-column">
-                                <h5 id="experience_description"class="text-center my-3 text-shadow-white">- Étude des besoins <br> - Création du site web https://csesmi.fr/ et https://fo.csavigny.fr/<br> - Mise en place d'une boutique en ligne<br> - Mise en ligne d'une solution de dépôt de document.<br> - Formation des utilisateurs à l'utilisation des fonctionnalités du site.<br> - Animation de réseaux sociaux<br> - Maintenance et support du site</h3>
-                                <section class="centered skills_needed">
-                                    <img v-for="skill in experiences[current_experience].skills.skills_needed" :src="skill.img" :alt="skill.name">
-                                </section>
-                            </div>
-
-                            
-                    </div>
-
+                       
                     </div>
                 </transition>
 
