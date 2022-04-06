@@ -21,6 +21,7 @@ new Vue({
             this.page = page;
         },
         toggle_skills(arg){
+
             if(this.page=="skills"){
                 this.isSoftSkills = arg
             }else{
@@ -30,6 +31,7 @@ new Vue({
            
         },
         getAllData(){ // GET ALL DATA FROM THE JSON FILES
+
             fetch("skills.json").then(response => response.json()).then(data => (this.skills = data));
 
             fetch("softskills.json").then(response => response.json()).then(data => (this.softskills = data));
@@ -39,12 +41,9 @@ new Vue({
             fetch("experiences.json").then(response => response.json()).then(data => (this.experiences = data));
 
         },
-
-
         updateCurrentIndex(input=""){
 
-
-            
+            this.InExecution = true;
 
             if(this.isWorkExperience){
                 if(input == "-" && this.current_experience!=0){
@@ -62,8 +61,9 @@ new Vue({
                 document.getElementById("experienceSelector").value = this.current_experience + 1;
                 removeeffect(this.experiences[this.current_experience].description, "experience_description");
                 
-    
             }else{
+
+                 this.InExecution = true;
                 if(input == "-" && this.current_project!=0){
                     this.current_project--
                 }else
@@ -81,11 +81,9 @@ new Vue({
                
             }
 
-
             if(this.InExecution){
                 return
             }
-            this.InExecution = true;
 
             document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
             setTimeout(() => {
@@ -94,8 +92,8 @@ new Vue({
             }, 1000);
         
         },
-        
         selectOtherIndex(){
+
             this.InExecution = true;
 
             if(this.isWorkExperience){
@@ -109,6 +107,7 @@ new Vue({
             if(this.InExecution){
                 return
             }
+
             document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
             setTimeout(() => {
                 document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
