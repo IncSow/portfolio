@@ -780,7 +780,11 @@ hgroup>h1, hgroup>h2{
     border: 2px solid white;
     pointer-events: all;
     cursor: pointer;
-    transition: .5s
+    transition: .2s
+}
+.IndexSelectorChangement{
+    opacity: 0.1;
+    pointer-events: none;
 }
 .IndexSelector:focus{
     color: red !important;

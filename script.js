@@ -1,9 +1,9 @@
 function go_to_page(obj){
     document.getElementById("background").style.backgroundColor = "black"
     document.body.classList.toggle("transitionning");
-    for (let i = 0; i < document.getElementsByClassName("menu-img").length; i++) {
-        document.getElementsByClassName("menu-img")[i].style.opacity = "0"
-        
+
+    for(let menuImg of document.getElementsByClassName('menu-img')){
+        menuImg.style.opacity = 0
     }
     
     setTimeout(
@@ -67,6 +67,5 @@ function CopyToClipboard(){
     setTimeout(() => {
         copied.style.opacity = 0;
     }, 1500);
-
 
 }

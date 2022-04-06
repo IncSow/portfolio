@@ -23,13 +23,9 @@ new Vue({
         toggle_skills(arg){
             if(this.page=="skills"){
                 this.isSoftSkills = arg
-            }else if(this.page=="projects" && this.isWorkExperience){
-                this.isWorkExperience = arg;
-                setTimeout(() => {this.updateCurrentIndex("none")}, 10)
-                
             }else{
                 this.isWorkExperience = arg;
-                setTimeout(() => {this.updateCurrentIndex("none")}, 10)
+                setTimeout(() => {this.updateCurrentIndex()}, 10) // Corrects the index of the input
             }
            
         },
@@ -45,8 +41,10 @@ new Vue({
         },
 
 
-        updateCurrentIndex(input){
+        updateCurrentIndex(input=""){
 
+
+            
 
             if(this.isWorkExperience){
                 if(input == "-" && this.current_experience!=0){
@@ -62,7 +60,6 @@ new Vue({
                     this.current_experience = 0
                 }
                 document.getElementById("experienceSelector").value = this.current_experience + 1;
-
                 removeeffect(this.experiences[this.current_experience].description, "experience_description");
                 
     
@@ -80,9 +77,7 @@ new Vue({
                     this.current_project = 0
                 }
                 document.getElementById("projectSelector").value = this.current_project + 1
-
                 removeeffect(this.projects[this.current_project].description, "project_description")
-               
                
             }
 
@@ -90,20 +85,18 @@ new Vue({
             if(this.InExecution){
                 return
             }
-
             this.InExecution = true;
 
-            document.getElementsByClassName("IndexSelector")[0].style.pointerEvents = "none";
-            document.getElementsByClassName("IndexSelector")[0].style.opacity = 0.1;
+            document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
             setTimeout(() => {
-                document.getElementsByClassName("IndexSelector")[0].style.pointerEvents = "all"
-                document.getElementsByClassName("IndexSelector")[0].style.opacity = 1;
+                document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
                 this.InExecution = false
             }, 1000);
         
         },
         
         selectOtherIndex(){
+            this.InExecution = true;
 
             if(this.isWorkExperience){
                 this.current_experience = document.getElementById("experienceSelector").value-1;
@@ -116,15 +109,13 @@ new Vue({
             if(this.InExecution){
                 return
             }
-            document.getElementsByClassName("IndexSelector")[0].style.pointerEvents = "none";
-            document.getElementsByClassName("IndexSelector")[0].style.opacity = 0.1;
+            document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
             setTimeout(() => {
+                document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
                 this.InExecution = false
-                document.getElementsByClassName("IndexSelector")[0].style.pointerEvents = "all"
-                document.getElementsByClassName("IndexSelector")[0].style.opacity = 1;
             }, 1000);
             
-            this.InExecution = true;
+            
             
         }
     },
