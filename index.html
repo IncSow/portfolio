@@ -78,7 +78,7 @@
                  <transition name="appearskill"> 
                     <div v-if="page=='projects'"class="projects centered container about_me">
                         <div class="centered mb-5 mt-2">
-                            <button class="button-rounded"  :class="{ activeButtonRounded: isWorkExperience==false }" @click="toggle_skills(false)">Projets profesionnelles</button>
+                            <button class="button-rounded"  :class="{ activeButtonRounded: isWorkExperience==false }" @click="toggle_skills(false)">Projets profesionnels</button>
                             <button class="button-rounded" :class="{ activeButtonRounded: isWorkExperience }" @click="toggle_skills(true)">Expériences profesionnelles</button>
                      </div>
                         
@@ -109,7 +109,7 @@
                                 </section>
                             </div>
 
-                            
+                        
                             </div>
                         </div>
                             <div id="experiences" v-if="isWorkExperience == true" class="justify-content-evenly w-100 centered flex-column">
