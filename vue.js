@@ -43,6 +43,10 @@ new Vue({
         },
         updateCurrentIndex(input=""){
 
+            if(this.InExecution){
+                return
+            }
+
             this.InExecution = true;
 
             if(this.isWorkExperience){
@@ -81,9 +85,7 @@ new Vue({
                
             }
 
-            if(this.InExecution){
-                return
-            }
+            
 
             document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
             setTimeout(() => {
@@ -93,6 +95,9 @@ new Vue({
         
         },
         selectOtherIndex(){
+            if(this.InExecution){
+                return
+            }
 
             this.InExecution = true;
 
@@ -104,9 +109,7 @@ new Vue({
                 removeeffect(this.projects[this.current_project].description, "project_description" );
             }
             
-            if(this.InExecution){
-                return
-            }
+            
 
             document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
             setTimeout(() => {
