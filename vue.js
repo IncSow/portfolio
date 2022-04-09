@@ -46,46 +46,30 @@ new Vue({
             if(this.InExecution){
                 return
             }
-
             this.InExecution = true;
 
-            if(this.isWorkExperience){
-                if(input == "-" && this.current_experience!=0){
-                    this.current_experience--
-                }else
-                if(input == "-" && this.current_experience == 0){
-                    this.current_experience = this.experiences.length-1
-                }else
-                if(input == "+" && this.current_experience != this.experiences.length-1){
-                    this.current_experience++
-                }else
-                if(input == "+" && this.current_experience == this.experiences.length-1){
-                    this.current_experience = 0
-                }
-                document.getElementById("experienceSelector").value = this.current_experience + 1;
-                removeeffect(this.experiences[this.current_experience].description, "experience_description");
-                
+            
+            if(this.isWorkExperience) {
+                var current = this.current_experience
+                var obj = this.experiences
+                var id = "experienceSelector"
+                var description = "experience_description"
             }else{
-
-                 this.InExecution = true;
-                if(input == "-" && this.current_project!=0){
-                    this.current_project--
-                }else
-                if(input == "-" && this.current_project == 0){
-                    this.current_project = this.projects.length-1
-                }else
-                if(input == "+" && this.current_project != this.projects.length-1){
-                    this.current_project++
-                }else
-                if(input == "+" && this.current_project == this.projects.length-1){
-                    this.current_project = 0
-                }
-                document.getElementById("projectSelector").value = this.current_project + 1
-                removeeffect(this.projects[this.current_project].description, "project_description")
-               
+                var current = this.current_project
+                var obj = this.projects
+                var id = "projectSelector"
+                var description = "project_description"       
             }
 
-            
+
+            if(input == "-") {
+                current = (current == 0) ? obj.length-1 : current-1;
+            }else if(input=='+'){
+                current = (current == obj.length-1) ? 0 : current + 1
+            }
+            document.getElementById(id).value = current + 1
+            removeeffect(obj[current].description,description);
+            (this.isWorkExperience) ? this.current_experience = current : this.current_project = current
 
             document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
             setTimeout(() => {
@@ -98,7 +82,6 @@ new Vue({
             if(this.InExecution){
                 return
             }
-
             this.InExecution = true;
 
             if(this.isWorkExperience){
