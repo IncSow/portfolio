@@ -41,6 +41,14 @@ new Vue({
             fetch("experiences.json").then(response => response.json()).then(data => (this.experiences = data));
 
         },
+        toggleSelectorClass(){
+            document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
+            setTimeout(() => {
+                document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
+                this.InExecution = false
+            }, 1000);
+        }
+        ,
         updateCurrentIndex(input=""){
 
             if(this.InExecution){
@@ -59,8 +67,7 @@ new Vue({
                 var obj = this.projects
                 var id = "projectSelector"
                 var description = "project_description"       
-            }
-
+            } 
 
             if(input == "-") {
                 current = (current == 0) ? obj.length-1 : current-1;
@@ -71,11 +78,8 @@ new Vue({
             removeeffect(obj[current].description,description);
             (this.isWorkExperience) ? this.current_experience = current : this.current_project = current
 
-            document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
-            setTimeout(() => {
-                document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
-                this.InExecution = false
-            }, 1000);
+            this.toggleSelectorClass()
+            
         
         },
         selectOtherIndex(){
@@ -92,13 +96,7 @@ new Vue({
                 removeeffect(this.projects[this.current_project].description, "project_description" );
             }
             
-            
-
-            document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
-            setTimeout(() => {
-                document.getElementsByClassName("IndexSelector")[0].classList.toggle("IndexSelectorChangement");
-                this.InExecution = false
-            }, 1000);
+            this.toggleSelectorClass()
             
             
             
