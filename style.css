@@ -325,68 +325,6 @@ hgroup>h1, hgroup>h2{
 }
 
 
-.appearskill-enter-active{
-    animation: TESTCOME 2s ease;
-}
-.blur-enter-active{
-    filter: blur(0px);
-}
-.blurappear-leave-active{
-    filter: blur(15px);
-}
-
-
-
-
-.appearskill-leave-active, .appearabbout-leave-active {
-    display: none;
-}
-.appearskill-leave-to, .appearabbout-leave-to{
-    opacity: 0;
-}
-
-.appearabbout-enter-active {
-    animation: TESTCOME 2s ease, skillbordermovement 2s ease;
-}
-
-
-
-.appearin-enter-active, .appearin-enter-from{
-    animation: appearin .7s ease;
-}
-.appearin-leave-active, .appearin-leave-to {
-    animation: appearin .5s ease;
-    animation-direction: reverse;
-}
-.come-left-enter-active{
-    animation: come-left .7s ease;
-    animation-delay: .10s;
-}
-
-
-
-.come-right-enter-active{
-    animation: come-right .7s ease;
-    animation-delay: .10s;
-}
-
-.come-up-enter-active{
-    animation: come-up .7s ease;
-    animation-delay: .10s;
-}
-
-.come-left-leave-active{
-    animation: come-left .5s ease;
-    animation-direction: reverse;
-}
-.come-right-leave-active{
-    animation: come-right .5s ease;
-    animation-direction: reverse;
-}
-.come-up-leave-active{
-    animation: come-up .5s ease;
-    animation-direction: reverse;
-}
 
 
 
@@ -458,11 +396,6 @@ img[alt="logo Vue JS"]{
 img[alt="logo python"]{
     filter: drop-shadow(0px 0px 10px rgba(56, 118, 172, 0.7));
 }
-
-
-
-
-
 
 
 #copied{
@@ -737,11 +670,62 @@ img[alt="logo python"]{
             transform: scale(1);
         }
     }
-    
-  /* --------------------------------------------------------------------- */
 
 
-  /* MEDIA QUERIES GO HERE */
+
+    .appearskill-enter-active{
+        animation: TESTCOME 2s ease;
+    }
+    .blur-enter-active{
+        filter: blur(0px);
+    }
+    .blurappear-leave-active{
+        filter: blur(15px);
+    }
+    .appearskill-leave-active, .appearabbout-leave-active {
+        display: none;
+    }
+    .appearskill-leave-to, .appearabbout-leave-to{
+        opacity: 0;
+    }
+    .appearabbout-enter-active {
+        animation: TESTCOME 2s ease, skillbordermovement 2s ease;
+    }
+    .appearin-enter-active, .appearin-enter-from{
+        animation: appearin .7s ease;
+    }
+    .appearin-leave-active, .appearin-leave-to {
+        animation: appearin .5s ease;
+        animation-direction: reverse;
+    }
+    .come-left-enter-active{
+        animation: come-left .7s ease;
+        animation-delay: .10s;
+    }
+    .come-right-enter-active{
+        animation: come-right .7s ease;
+        animation-delay: .10s;
+    }
+    .come-up-enter-active{
+        animation: come-up .7s ease;
+        animation-delay: .10s;
+    }
+    .come-left-leave-active{
+        animation: come-left .5s ease;
+        animation-direction: reverse;
+    }
+    .come-right-leave-active{
+        animation: come-right .5s ease;
+        animation-direction: reverse;
+    }
+    .come-up-leave-active{
+        animation: come-up .5s ease;
+        animation-direction: reverse;
+    }
+/* --------------------------------------------------------------------- */
+
+
+/* MEDIA QUERIES GO HERE */
 
   @media (max-width : 600px) { /* Mobile version  */
 
