@@ -1,6 +1,23 @@
 [
+  {
+    "id": 1,
+    "name": "Développeur FullStack",
+    "mainImg":"/media/Monthlee.png",
+    "dates": "Mai 2022 - ? ",
+    "description":"- Mise en place de test End-to-End <- Mise en place de Github Actions pour faciliter le CI/CD <- Manipulation du back-end Ruby on Rails <- Modification et amélioration du Front-End (Angular / Typescript).<- Télétravail en autonomie.<- Aide au dévéloppement produit.",
+    "skills": {
+      "skills_needed": [
+          { "name": "logo wordpress", "img": "/media/typescript.webp" },
+          { "name": "logo html", "img": "/media/ruby-on-rails.webp" },
+          { "name" : "logo html", "img":"/media/angular.png"},
+          { "name" : "logo html", "img":"/media/cypress.webp"},
+          { "name" : "logo html", "img":"/media/github.svg"},
+          { "name" : "logo wordpress", "img":"/media/logo-docker.webp"}
+      ]
+    }
+},
     {
-        "id": 1,
+        "id": 2,
         "name": "Stage de Chef de projet digital et Développeur web",
         "mainImg":"/media/Accor.png",
         "dates": "Février 2021 - Avril 2021",
@@ -15,7 +32,7 @@
         }
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Freelance - Maintenance et support du site csesmi.fr",
       "mainImg":"/media/Accor.png",
       "dates": "Avril 2021 - Maintenant",
