@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "FullStack Developper",
+    "name": "FullStack Developer",
     "mainImg":"/media/Monthlee.png",
     "dates": "May 2022 - ? ",
     "description":"- Creation of End-to-End test  <- Setting up Github actions, as to facilitate CI/CD<- Backend development in Ruby on Rails <- Front-end development in Angular / Typescript.<- Fully remote.<- Data-model improvements <- Product development.",
@@ -18,7 +18,7 @@
 },
     {
         "id": 2,
-        "name": "Web developpeur and Project Manager ( Internship )",
+        "name": "Web developer and Project Manager ( Internship )",
         "mainImg":"/media/Accor.png",
         "dates": "February 2021 - April 2021",
         "description":"- Study of the \"requirement needs\" <- Creation of the websites https://csesmi.fr/ and https://fo.csavigny.fr/<- Setting up an online shop<- Creation of an online file transfer solution.<- Training of the company's staff about the usage of the Website's fonctionnalities.<- Social Media manager for a week.<- Maintenance and IT support of the Website",
@@ -36,7 +36,7 @@
       "name": "Freelance - Maintenance and IT support of the Website csesmi.fr",
       "mainImg":"/media/Accor.png",
       "dates": "April 2021 - Now",
-      "description":" - Maintenance of the website and keeping it up to date.<- Creation of multiples articles<- IT support",
+      "description":" - Maintenance of the website and keeping it up to date.<- Creation of multiple articles<- IT support",
       "skills": {
         "skills_needed": [
             { "name": "logo wordpress", "img": "/media/wordpress.svg" }

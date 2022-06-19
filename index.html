@@ -79,7 +79,7 @@
                     <div v-if="page=='projects'"class="projects centered container about_me">
                         <div class="centered mb-5 mt-2">
                             <button class="button-rounded"  :class="{ activeButtonRounded: isWorkExperience==false }" @click="toggle_skills(false)">Coding projects</button>
-                            <button class="button-rounded" :class="{ activeButtonRounded: isWorkExperience }" @click="toggle_skills(true)">Profesionnal experiences</button>
+                            <button class="button-rounded" :class="{ activeButtonRounded: isWorkExperience }" @click="toggle_skills(true)">Professional experiences</button>
                         </div>
 
                         <div v-if="isWorkExperience == false"> 
@@ -185,7 +185,7 @@
                 <transition name="appearabbout">
                     <div v-if="page=='about_me'" class="about_me centered">
                         <hgroup>
-                            <h4 class="text-center">I am second year at ESD - École Supérieure du digital - currently focusing on <b>Web developpement</b>, as well as a bit of <b>Datascrapping</b> on the side</h4> 
+                            <h4 class="text-center">I am a second year at ESD - École Supérieure du digital - currently focusing on <b>Web development</b>, as well as a bit of <b>Datascrapping</b> on the side</h4> 
                             <h4 class="text-center">I am mostly <b>self-taught</b>, thus I know how to search for the answers I need and how to read documentations. I am able to work by myself without supervision and as a team, where I can lead or be led with no issues. Moreover, I can fluently speak and write in <b>French as well as English</b>.</h4>
                         </hgroup> 
                         <button><a href="media/CV - Anonymisé.pdf" download="CV LiLo">Download my CV!</a></button>
