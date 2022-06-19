@@ -1,37 +1,37 @@
 [
     {
       "id": 1,
-      "name": "Anglais",
+      "name": "English",
       "img_url":"/media/english.png"
     },
     {
       "id": 2,
-      "name": "Français",
+      "name": "French",
       "img_url":"/media/french.png"
     },
     {
       "id": 3,
-      "name": "Traduction",
+      "name": "Translation",
       "img_url":"/media/translation.png"
     },
     {
       "id": 4,
-      "name": "Aisance à l'oral",
+      "name": "Ease to speak",
       "img_url":"/media/oral.png"
     },
     {
       "id": 5,
-      "name": "Travail de groupe",
+      "name": "Team work",
       "img_url":"/media/teamwork.png"
     },
     {
       "id": 6,
-      "name": "Pédagogie",
+      "name": "Teaching ability",
       "img_url":"/media/teach.png"
     },
     {
         "id": 7,
-        "name": "Autodidacte / Autonome",
+        "name": "Self taught / Autonomous",
         "img_url":"/media/books.png"
     },
     {

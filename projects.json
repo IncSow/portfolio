@@ -1,10 +1,11 @@
 [
     {
         "id": 1,
-        "name": "Création de ce site web",
+        "name": "Website creation ",
         "mainImg":"/media/vue-logo-1.png",
         "link": "/",
-        "description":"Mon portfolio WordPress n'étant pas à mon goût, j'ai décidé de faire ce site entièrement à la main et d'apprendre VueJS au passage, grâce à la documentation et à beaucoup de recherches sur Google. Toutes les animations de ce site sont en CSS et facilitées par la balise 'transition' de Vue. Le seul Javascript (hors VueJS) présent est utilisé pour les changement de page.",
+        "description":"My Wordpress portfolio wasn't to my liking thus i decided to create this website from scratch and to learn VueJS on the way, thanks to the online documentation and a lot of Google searches. All of this website's animations are done in CSS and helped by the 'transition' tag from Vue. The only JS used here (except Vue) is for the change of pages ",
+
         "skills": {
           "skills_needed": [
               { "name": "logo html", "img": "/media/html.svg" },
@@ -16,10 +17,11 @@
     },
     {
       "id": 2,
-      "name": "Création du site 'csesmi.fr' pour le CSE d'Accor SMI",
+      "name": "Creation of the 'csesmi.fr' website for the Social and Economic Comitee of Accor SMI",
       "mainImg":"/media/wordpress.svg",
       "link": "https://www.csesmi.fr/",
-      "description":"Lors de mon premier stage de deux mois, j'avais pour mission de créer le site du CSE d'Accor SMI, à l'aide de WordPress, de beaucoup de CSS et de Woocommerce. De plus, j'avais aussi pour mission de former leurs équipes à l'utilisation du-dit site (Gestion d'articles, support à faire, gérer les commandes). <+Enfin, j'assure désormais la maintenance, le support et la vie du site en freelance pour Accor SMI].",
+      "description":"During my first 2 month internship, i had to create the website for the Social and Economic Comitee of Accor SM, using Wordpress, a lot of CSS and Woocommerce. Morevover, i had to teach their teams how to use the created website(Articles management, commands). <+ Lastly, i now provide the maintenance, the IT support and the updates on the life of the website as a freelancer for Accor SMI].",
+     
       "skills": {
         "skills_needed": [
             { "name": "logo css3", "img": "/media/css.svg" },
@@ -29,10 +31,11 @@
     },
     {
       "id": 3,
-      "name": "Création d'un site au style Matrix",
+      "name": "Matrix style website creation",
       "mainImg":"/media/logo.png",
       "link": "https://hackervase.netlify.app/",
-      "description":"J'avais comme consigne de transformer un objet banal en accesoire de hacker. J'ai pu utiliser ce projet pour apprendre à me servir correctement des elements ::before et ::after. Le responsive n'a pas encore été paufiné car le temps de rendu du projet était court.",
+      "description":"I had as an instruction to transform a common object into a 'hacker' accesory. I have been able to use this projet to learn how to correctly use ::before and ::after elements. The website is not responsive as it was not a part of the assignment and the time constraint didn't allow me to improve it as much as I had wished for. ",
+      
       "skills": {
         "skills_needed": [
             { "name": "logo html", "img": "/media/html.svg" },
@@ -43,9 +46,9 @@
   },
   {
     "id":4,
-    "name": "Création d'un bot discord",
+    "name": "Creation of a Discord bot",
     "mainImg":"/media/python.svg",
-    "description":"Afin d'approfondir mes connaissances en python, j'ai décidé de créer un bot discord. Ce dernier permettait d'afficher des images venant d'un lien instagram (via Selenium) et de permettre à chaque administrateur de définir des mots à bannir sur leurs serveurs. Afin de garder en mémoire chaque configuration et listes de mots à bannir de chaque serveur, une base de données en SQLite a été mise en place et le code a été pensé afin d'éviter les injections SQL.",
+    "description":"As a way of furthering my python skills, I had decided to create a discord bot. This bot was used to get a preview of any Instagram post ( both the post's text and the image, through Selenium ) that were linked on a server, before Instagram had a link preview of it's own. The bot also functioned as a moderation bot, as it detected any swear words sent by users. The admins could also add new swears words to censor, only for their server. This was done thanks to an SQLite Database, and through an SQL injection proof code.",
     "skills": {
       "skills_needed": [
           { "name": "logo python", "img": "/media/python.svg" },
