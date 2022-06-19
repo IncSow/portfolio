@@ -33,6 +33,11 @@
         "id": 7,
         "name": "Autodidacte / Autonome",
         "img_url":"/media/books.png"
+    },
+    {
+      "id": 8,
+      "name": "TDD",
+      "img_url":"/media/TDD.webp"
     }
     
   ]
