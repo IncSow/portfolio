@@ -17,7 +17,6 @@ function removeeffect(txt, text_to_change){
     document.getElementById(text_to_change).innerHTML = document.getElementById(text_to_change).innerHTML.replaceAll("</b>","").replaceAll("<b>","");
     let InputText = document.getElementById(text_to_change).innerHTML
     let maxrotation = InputText.length;
-    console.log(maxrotation, document.getElementById(text_to_change).innerHTML.length)
     let speed = 500/maxrotation;
     for(let i = 0; i<maxrotation; i++){ 
         speed += 500/maxrotation
@@ -43,7 +42,6 @@ function typingeffect(txt, text_to_change){
                 document.getElementById(text_to_change).innerHTML+= "<br>"}
             else if (txt.charAt(i) == "+"){
                 bold_mode = true;
-                console.log("true!" + charAt(i))
             }
             else if (txt.charAt(i) == "]"){
                 bold_mode = false
