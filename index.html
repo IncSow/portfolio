@@ -1,216 +1,365 @@
 <!DOCTYPE html lang="fr">
 <html lang="fr">
-<head>
-<title>Portfolio LïLo</title>
-<meta name="keywords" content="portfoliolilo, portfolio lilo, LiLo, Developpeur, dev, web, site web, html, css, js, JavaScript, Vue js, dev freelance, créer site">
-<meta name="description" content="Web developer with three years of experience - Looking for freelance gigs.">
-<meta charset="UTF-8">
-<meta name="author" content="LïLo">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/jpg" href="/media/favicon.jpg" />
-</head>
-<body>
+  <head>
+    <title>Portfolio LïLo</title>
+    <meta
+      name="keywords"
+      content="portfoliolilo, portfolio lilo, LiLo, Developpeur, dev, web, site web, html, css, js, JavaScript, Vue js, dev freelance, créer site"
+    />
+    <meta
+      name="description"
+      content="Web developer with three years of experience - Looking for freelance gigs."
+    />
+    <meta charset="UTF-8" />
+    <meta name="author" content="LïLo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/jpg" href="/media/favicon.jpg" />
+  </head>
+  <body>
+    <wrapper id="app">
+      <header class="container-fluid mt-2 mt-md-3">
+        <hgroup class="ms-0 ms-lg-5 mt-1 mt-lg-5 row centered">
+          <h2>"LïLo"</h2>
+          <h1 class="text-center" v-if="page=='main' || page=='intro' ">
+            WebDev - Third year at SupDeVinci - Paris
+          </h1>
+          <button
+            @click="change_page('main')"
+            class="text-center back-button"
+            v-else
+          >
+            Back to the summary
+          </button>
+        </hgroup>
 
-    <wrapper id='app'>
-    
-        <header class="container-fluid mt-2 mt-md-3">
-                <hgroup class="ms-0 ms-lg-5 mt-1 mt-lg-5 row centered">
-                    <h2>"LïLo"</h2>
-                    <h1 class="text-center" v-if="page=='main' || page=='intro' ">WebDev - Third year at SupDeVinci - Paris</h1>
-                    <button @click="change_page('main')" class="text-center back-button" v-else>Back to the summary</button>
-                </hgroup>
-            
-                <section class="row me-0 me-lg-5 mt-4">
-                    <a class="col-12 centered " onclick="go_to_page(this)" data-link="https://github.com/IncSow"> <img class="menu-img" src="/media/Icon awesome-github-square.svg" alt="github's icon"> </a>
-                    
-                </section>
-            
-        </header>
+        <section class="row me-0 me-lg-5 mt-4">
+          <a
+            class="col-12 centered"
+            onclick="go_to_page(this)"
+            data-link="https://github.com/IncSow"
+          >
+            <img
+              class="menu-img"
+              src="/media/Icon awesome-github-square.svg"
+              alt="github's icon"
+            />
+          </a>
+        </section>
+      </header>
 
-        <nav class="centered" style="flex-direction:column;">
+      <nav class="centered" style="flex-direction: column">
+        <section
+          v-if="page =='intro' "
+          class="centered candy unselectable"
+          id="intro"
+        >
+          <span @click="change_page('main')" id="play-span" class="centered">
+            <img
+              src="media/play-button.png"
+              class="play-button"
+              alt="icon of a play button"
+            />
+            <span id="start-span">Discover more about me</span>
+          </span>
+        </section>
 
+        <div class="container-fluid mt-5">
+          <div class="row centered">
+            <transition name="come-left">
+              <section
+                @click="change_page('skills')"
+                v-if="page == 'main'"
+                class="centered candy unselectable col-8 col-lg-3 flex-column"
+              >
+                <span class="centered"> Skills </span>
+              </section>
+            </transition>
 
+            <transition name="come-up">
+              <section
+                @click="change_page('projects')"
+                v-if="page== 'main'"
+                class="centered candy unselectable col-8 col-lg-3 flex-column"
+              >
+                <span class="centered">Projects</span>
+              </section>
+            </transition>
 
+            <transition name="come-right">
+              <section
+                @click="change_page('about_me')"
+                v-if="page=='main'"
+                class="centered candy unselectable col-8 col-lg-3 flex-column"
+              >
+                <span class="centered">About me</span>
+              </section>
+            </transition>
+          </div>
+        </div>
 
-            <section  v-if="page =='intro' " class="centered candy unselectable" id='intro'>
-                <span  @click="change_page('main')" id="play-span" class="centered">  <img src="media/play-button.png" class="play-button" alt="icon of a play button">  <span id="start-span">Discover more about me</span> </span>
-            </section>
+        <transition name="appearin">
+          <footer v-if="page=='main'" id="contacts" class="centered mb-5">
+            <div class="candy centered" onclick="CopyToClipboard()">
+              <h3>Contact me:</h3>
+              <p class="email">helynt@dsifrance.fr</p>
+            </div>
+          </footer>
+        </transition>
 
+        <transition name="appearskill">
+          <div
+            v-if="page=='projects'"
+            class="projects centered container about_me"
+          >
+            <div class="centered mb-5 mt-2">
+              <button
+                class="button-rounded"
+                :class="{ activeButtonRounded: isWorkExperience==false }"
+                @click="toggle_skills(false)"
+              >
+                Coding projects
+              </button>
+              <button
+                class="button-rounded"
+                :class="{ activeButtonRounded: isWorkExperience }"
+                @click="toggle_skills(true)"
+              >
+                Professional experiences
+              </button>
+            </div>
 
-            
-            
-                <div class="container-fluid mt-5">
-                    <div class="row centered">
-                        <transition name="come-left" >   
-                            <section @click="change_page('skills')" v-if="page == 'main'" class="centered candy unselectable col-8 col-lg-3 flex-column" >
-                                <span class="centered"> Skills </span>
-                            </section>    
-                        </transition>
+            <div v-if="isWorkExperience == false">
+              <div class="centered project_state mb-3">
+                <button
+                  class="centered button-rounded"
+                  @click="updateCurrentIndex('-')"
+                >
+                  Previous
+                </button>
+                <span class="centered text-shadow-white">Project:</span>
+                <select
+                  @change="selectOtherIndex()"
+                  name="projectSelect"
+                  class="IndexSelector text-shadow-white"
+                  id="projectSelector"
+                >
+                  <option v-for="project in projects" :value="project.id">
+                    {{project.id}}
+                  </option>
+                </select>
+                <button
+                  class="centered button-rounded"
+                  @click="updateCurrentIndex('+')"
+                >
+                  Next
+                </button>
+              </div>
 
-
-                        <transition name="come-up">
-                            <section @click="change_page('projects')" v-if="page== 'main'" class="centered candy unselectable col-8 col-lg-3 flex-column" >
-                                <span  class="centered">Projects</span> 
-                            </section> 
-                        </transition>
-                
-
-                        <transition name="come-right">
-                            <section  @click="change_page('about_me')" v-if="page=='main'" class="centered candy unselectable col-8 col-lg-3 flex-column"  >
-                                <span  class="centered">About me</span>
-                            </section> 
-                        </transition>
-                    </div>
+              <div class="row centered" style="flex-direction: row">
+                <div class="col-12 col-lg-4 centered flex-column">
+                  <h2 class="text-center text-shadow-white">
+                    {{ projects[current_project].name }}
+                  </h2>
+                  <a
+                    style="width: 40%"
+                    :href="projects[current_project].link"
+                    class="centered"
+                    ><img
+                      style="width: 100%"
+                      class="project_img"
+                      :src="projects[current_project].mainImg"
+                      :alt="projects[current_project].name"
+                    />
+                  </a>
+                  <a :href="projects[current_project].link" target="_blank"
+                    ><button
+                      class="mt-4 mb-md-5 button-rounded"
+                      v-if="projects[current_project].link"
+                    >
+                      Visit the website
+                    </button></a
+                  >
                 </div>
-         
 
-                <transition name="appearin">
-                    <footer v-if="page=='main'" id="contacts" class="centered mb-5">
-                        <div class="candy centered" onclick="CopyToClipboard()">
-                            <h3>Contact me:</h3>
-                            <p class="email">helynt@dsifrance.fr</p>
-                        </div>
-                    </footer>
-                </transition>
+                <div class="col-12 col-lg-8 centered flex-column">
+                  <h3
+                    id="project_description"
+                    class="text-center my-3 text-shadow-white"
+                  >
+                    {{ projects[0].description }}
+                  </h3>
+                  <section class="centered skills_needed">
+                    <img
+                      v-for="skill in projects[current_project].skills.skills_needed"
+                      :src="skill.img"
+                      :alt="skill.name"
+                    />
+                  </section>
+                </div>
+              </div>
+            </div>
 
-                <transition name="appearskill"> 
-                    <div v-if="page=='projects'"class="projects centered container about_me">
-                        <div class="centered mb-5 mt-2">
-                            <button class="button-rounded"  :class="{ activeButtonRounded: isWorkExperience==false }" @click="toggle_skills(false)">Coding projects</button>
-                            <button class="button-rounded" :class="{ activeButtonRounded: isWorkExperience }" @click="toggle_skills(true)">Professional experiences</button>
-                        </div>
+            <div
+              id="experiences"
+              v-if="isWorkExperience == true"
+              class="justify-content-evenly w-100 centered flex-column"
+            >
+              <div class="centered project_state mb-3">
+                <button
+                  class="centered button-rounded"
+                  @click="updateCurrentIndex('-')"
+                >
+                  Previous
+                </button>
+                <span class="centered text-shadow-white">Project:</span>
+                <select
+                  @change="selectOtherIndex()"
+                  name="experienceSelect"
+                  class="IndexSelector text-shadow-white"
+                  id="experienceSelector"
+                >
+                  <option
+                    v-for="experience in experiences"
+                    :value="experience.id"
+                  >
+                    {{experience.id}}
+                  </option>
+                </select>
+                <button
+                  class="centered button-rounded"
+                  @click="updateCurrentIndex('+')"
+                >
+                  Next
+                </button>
+              </div>
 
-                        <div v-if="isWorkExperience == false"> 
+              <div class="row centered" style="flex-direction: row">
+                <div class="col-12 col-lg-4 centered flex-column">
+                  <h2 class="text-center text-shadow-white">
+                    {{ experiences[current_experience].name }}
+                  </h2>
+                  <a
+                    style="width: 40%"
+                    :href="experiences[current_experience].link"
+                    class="centered"
+                    ><img
+                      style="width: 100%"
+                      class="project_img"
+                      :src="experiences[current_experience].mainImg"
+                      :alt="experiences[current_experience].name"
+                    />
+                  </a>
+                  <p class="text-shadow-white">
+                    {{ experiences[current_experience].dates }}
+                  </p>
+                </div>
 
-                            <div class="centered project_state mb-3">
-                            
-                                <button class="centered button-rounded" @click="updateCurrentIndex('-')">Previous</button> <span class="centered text-shadow-white">Project:</span>
-                                <select @change="selectOtherIndex()" name="projectSelect" class="IndexSelector text-shadow-white" id="projectSelector">
-                                    <option v-for="project in projects" :value="project.id"> {{project.id}}</option>
-                                </select>
-                                <button class="centered button-rounded" @click="updateCurrentIndex('+')"> Next</button>
-                            
-                            </div>
+                <div class="col-12 col-lg-8 centered flex-column">
+                  <h5
+                    id="experience_description"
+                    class="text-center my-3 text-shadow-white"
+                  >
+                    - Creation of End-to-End test <br />- Setting up Github
+                    actions, as to facilitate CI/CD<br />- Backend development
+                    in Ruby on Rails <br />- Front-end development in Angular /
+                    Typescript.<br />- Fully remote.<br />- Data-model
+                    improvements <br />- Product development.
+                  </h5>
+                  <section class="centered skills_needed">
+                    <img
+                      v-for="skill in experiences[current_experience].skills.skills_needed"
+                      :src="skill.img"
+                      :alt="skill.name"
+                    />
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition>
 
-                            <div class="row centered" style="flex-direction: row;">
-                            
-                                <div class="col-12 col-lg-4 centered flex-column">
+        <transition name="appearskill">
+          <div v-if="page=='skills'" class="container test1 unselectable">
+            <div class="centered skill_type" style="margin-top: -10vh">
+              <button
+                class="button-rounded"
+                :class="{ activeButtonRounded: isSoftSkills==false }"
+                @click="toggle_skills(false)"
+              >
+                Hard skills
+              </button>
+              <button
+                class="button-rounded"
+                :class="{ activeButtonRounded: isSoftSkills }"
+                @click="toggle_skills(true)"
+              >
+                Soft skills
+              </button>
+            </div>
 
-                                        <h2 class="text-center text-shadow-white">{{ projects[current_project].name }}</h2>
-                                        <a style="width: 40%;" :href="projects[current_project].link" class="centered"><img style="width: 100%;"class="project_img":src="projects[current_project].mainImg" :alt="projects[current_project].name"> </a>
-                                        <a :href="projects[current_project].link" target="_blank"><button class="mt-4 mb-md-5 button-rounded" v-if="projects[current_project].link"> Visit the website</button></a> 
-                                
-                                </div>
+            <div class="row centered mt-4">
+              <section
+                v-if="isSoftSkills == false"
+                v-for="skill in skills"
+                class="col-6 col-lg-3 m1"
+              >
+                <div class="skill centered">
+                  <img :src="skill.img_url" :alt="skill.name" />
+                  <h2>{{skill.name}}</h2>
+                </div>
+              </section>
 
-                                <div class="col-12 col-lg-8 centered flex-column">
+              <section
+                v-if="isSoftSkills == true"
+                v-for="softskill in softskills"
+                class="col-6 col-lg-3 m1"
+              >
+                <div class="skill centered">
+                  <img :src="softskill.img_url" :alt="softskill.name" />
+                  <h2 class="text-center">{{softskill.name}}</h2>
+                  <p v-if="softskill.detail">{{softskill.detail}}</p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </transition>
 
-                                    <h3 id="project_description"class="text-center my-3 text-shadow-white">{{ projects[0].description }}</h3>
-                                    <section class="centered skills_needed">
-                                        <img v-for="skill in projects[current_project].skills.skills_needed" :src="skill.img" :alt="skill.name">
-                                    </section>
+        <transition name="appearabbout">
+          <div v-if="page=='about_me'" class="about_me centered">
+            <hgroup>
+              <h4 class="text-center">
+                I am a third year at SupDeVinci - École Léonard de Vinci pole
+                tech - currently focusing on <b>Web development</b>, as well as
+                a bit of <b>Datascrapping</b> on the side
+              </h4>
+              <h4 class="text-center">
+                I am mostly <b>self-taught</b>, thus I know how to search for
+                the answers I need and how to read documentations. I am able to
+                work by myself without supervision and as a team, where I can
+                lead or be led with no issues. Moreover, I can fluently speak
+                and write in <b>French as well as English</b>.
+              </h4>
+            </hgroup>
+            <button>
+              <a href="media/CV - Anonymisé.pdf" download="CV LiLo"
+                >Download my CV!</a
+              >
+            </button>
+          </div>
+        </transition>
 
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div id="experiences" v-if="isWorkExperience == true" class="justify-content-evenly w-100 centered flex-column">
-
-                            <div class="centered project_state mb-3">
-                                <button class="centered button-rounded" @click="updateCurrentIndex('-')">Previous</button> <span class="centered text-shadow-white">Project:</span>
-                                <select @change="selectOtherIndex()" name="experienceSelect" class="IndexSelector text-shadow-white" id="experienceSelector">
-                                        <option v-for="experience in experiences" :value="experience.id" > {{experience.id}}</option>
-                                </select>
-                                <button class="centered button-rounded" @click="updateCurrentIndex('+')"> Next</button>
-                            </div>
-
-                            <div class="row centered" style="flex-direction: row;">
-
-                                <div class="col-12 col-lg-4 centered flex-column">
-                                    <h2 class="text-center text-shadow-white">{{ experiences[current_experience].name }}</h2>
-                                    <a style="width: 40%;" :href="experiences[current_experience].link" class="centered"><img style="width: 100%;"class="project_img":src="experiences[current_experience].mainImg" :alt="experiences[current_experience].name"> </a>
-                                    <p class="text-shadow-white">{{ experiences[current_experience].dates }}</p>
-                                </div>
-                            
-                                <div class="col-12 col-lg-8 centered flex-column">
-                                    <h5 id="experience_description"class="text-center my-3 text-shadow-white">- Creation of End-to-End test  <br>- Setting up Github actions, as to facilitate CI/CD<br>- Backend development in Ruby on Rails <br>- Front-end development in Angular / Typescript.<br>- Fully remote.<br>- Data-model improvements <br>- Product development.</h5>
-                                    <section class="centered skills_needed">
-                                        <img v-for="skill in experiences[current_experience].skills.skills_needed" :src="skill.img" :alt="skill.name">
-                                    </section>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </transition>
-
-
-
-                <transition name="appearskill">
-                    <div v-if="page=='skills'" class="container test1 unselectable">
-
-                        <div class="centered skill_type" style="margin-top: -10vh">
-                                <button class="button-rounded"  :class="{ activeButtonRounded: isSoftSkills==false }" @click="toggle_skills(false)">Hard skills</button>
-                                <button class="button-rounded" :class="{ activeButtonRounded: isSoftSkills }" @click="toggle_skills(true)">Soft skills</button>
-                        </div>
-
-                        <div class="row centered mt-4">
-                            
-                                <section v-if="isSoftSkills == false" v-for="skill in skills" class="col-6 col-lg-3 m1">
-                                    <div class="skill centered">
-                                        <img :src="skill.img_url" :alt="skill.name">
-                                        <h2>{{skill.name}}</h2>
-                                    </div>
-                                </section>
-
-                            <section v-if="isSoftSkills == true" v-for="softskill in softskills" class="col-6 col-lg-3 m1">
-                                <div class="skill centered">
-                                    <img :src="softskill.img_url" :alt="softskill.name">
-                                    <h2 class="text-center">{{softskill.name}}</h2>
-                                    <p v-if="softskill.detail">{{softskill.detail}}</p>
-                                </div>
-                            </section>
-
-                        </div>
-
-                    </div>
-                </transition>
-            
-
-                <transition name="appearabbout">
-                    <div v-if="page=='about_me'" class="about_me centered">
-                        <hgroup>
-                            <h4 class="text-center">I am a third year at SupDeVinci - École Léonard de Vinci pole tech - currently focusing on <b>Web development</b>, as well as a bit of <b>Datascrapping</b> on the side</h4> 
-                            <h4 class="text-center">I am mostly <b>self-taught</b>, thus I know how to search for the answers I need and how to read documentations. I am able to work by myself without supervision and as a team, where I can lead or be led with no issues. Moreover, I can fluently speak and write in <b>French as well as English</b>.</h4>
-                        </hgroup> 
-                        <button><a href="media/CV - Anonymisé.pdf" download="CV LiLo">Download my CV!</a></button>
-                    </div>
-                </transition>
-
-
-                <p id="copied">
-                    Text copied to the clipboard!
-                </p>
-                      
-        </nav>
-       
-
+        <p id="copied">Text copied to the clipboard!</p>
+      </nav>
     </wrapper>
 
-        
-
     <div id="background-image-container">
-        <div id="background"></div>
+      <div id="background"></div>
     </div>
-   
+
     <script src="/vue.min.js"></script>
     <script src="vue.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

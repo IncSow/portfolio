@@ -1,43 +1,42 @@
 [
-    {
-      "id": 1,
-      "name": "English",
-      "img_url":"/media/english.png"
-    },
-    {
-      "id": 2,
-      "name": "French",
-      "img_url":"/media/french.png"
-    },
-    {
-      "id": 3,
-      "name": "Translation",
-      "img_url":"/media/translation.png"
-    },
-    {
-      "id": 4,
-      "name": "Public speaking with ease",
-      "img_url":"/media/oral.png"
-    },
-    {
-      "id": 5,
-      "name": "Team work",
-      "img_url":"/media/teamwork.png"
-    },
-    {
-      "id": 6,
-      "name": "Teaching ability",
-      "img_url":"/media/teach.png"
-    },
-    {
-        "id": 7,
-        "name": "Self taught / Independant",
-        "img_url":"/media/books.png"
-    },
-    {
-      "id": 8,
-      "name": "TDD",
-      "img_url":"/media/TDD.webp"
-    }
-    
-  ]
+  {
+    "id": 1,
+    "name": "English",
+    "img_url": "/media/english.png"
+  },
+  {
+    "id": 2,
+    "name": "French",
+    "img_url": "/media/french.png"
+  },
+  {
+    "id": 3,
+    "name": "Translation",
+    "img_url": "/media/translation.png"
+  },
+  {
+    "id": 4,
+    "name": "Public speaking with ease",
+    "img_url": "/media/oral.png"
+  },
+  {
+    "id": 5,
+    "name": "Team work",
+    "img_url": "/media/teamwork.png"
+  },
+  {
+    "id": 6,
+    "name": "Teaching ability",
+    "img_url": "/media/teach.png"
+  },
+  {
+    "id": 7,
+    "name": "Self taught / Independant",
+    "img_url": "/media/books.png"
+  },
+  {
+    "id": 8,
+    "name": "TDD",
+    "img_url": "/media/TDD.webp"
+  }
+]
