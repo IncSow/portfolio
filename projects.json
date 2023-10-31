@@ -4,7 +4,7 @@
     "name": "Website creation",
     "mainImg": "/media/Vue-logo-1.png",
     "link": "/",
-    "description": "My Wordpress portfolio wasn't to my liking thus I decided to create this website from scratch and to learn VueJS on the way, thanks to its online documentation and a lot of Google searches. All of this website's animations are done in CSS and helped by the 'transition' tag from Vue. The only JS used here (except Vue) is for the page's navigation.",
+    "description": "My Wordpress portfolio wasn't to my liking thus I decided to create this website from scratch and to learn VueJS on the way, thanks to its online documentation and a lot of Google searches. All of this website's animations are done in CSS and helped by the 'transition' tag from Vue. The only JS used here (except Vue) is for the page's navigation. <- A new and redone version of this website is in the works!",
 
     "skills": {
       "skills_needed": [
