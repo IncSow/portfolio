@@ -1,48 +1,62 @@
 [
   {
     "id": 1,
-    "name": "FullStack Developer (Internship)",
-    "mainImg":"/media/Monthlee.png",
-    "dates": "May 2022 - September 2022 ",
-    "description":"- Creation of End-to-End test  <- Setting up Github actions, as to facilitate CI/CD<- Backend development in Ruby on Rails <- Front-end development in Angular / Typescript.<- Fully remote.<- Data-model improvements <- Product development.",
+    "name": " FullStack Developer - Freelance",
+    "mainImg": "/media/studyadvisor.svg",
+    "dates": "September 2022 - Now",
+    "description": "- Handled business / technical and evolution related matters. <- Reworked the entire homepage  <- Reworking the entire registration system for users<- Actively resolved bug and provided technical support for employees <- Front-end development in Vue.js<- Fully remote.<- Data-model improvements <- Worked as the sole dev / tech person in the entire company for 6years <- Product development.",
     "skills": {
       "skills_needed": [
-          { "name": "logo wordpress", "img": "/media/typescript.webp" },
-          { "name": "logo html", "img": "/media/ruby-on-rails.webp" },
-          { "name" : "logo html", "img":"/media/angular.png"},
-          { "name" : "logo html", "img":"/media/cypress.webp"},
-          { "name" : "logo html", "img":"/media/github.svg"},
-          { "name" : "logo wordpress", "img":"/media/logo-docker.webp"}
+        { "name": "logo html", "img": "/media/ruby-on-rails.webp" },
+        { "name": "logo html", "img": "/media/linux.webp" },
+        { "name": "logo html", "img": "/media/teamwork.png" },
+        { "name": "logo html", "img": "/media/github.svg" }
       ]
     }
-},
-    {
-        "id": 2,
-        "name": "Web developer and Project Manager ( Internship )",
-        "mainImg":"/media/Accor.png",
-        "dates": "February 2021 - April 2021",
-        "description":"- Study of the \"requirement needs\" <- Creation of the websites https://csesmi.fr/ and https://fo.csavigny.fr/<- Setting up an online shop<- Creation of an online file transfer solution.<- Training of the company's staff about the usage of the Website's fonctionnalities.<- Social Media manager for a week.<- Maintenance and IT support of the Website",
-        "skills": {
-          "skills_needed": [
-              { "name": "logo html", "img": "/media/html.svg" },
-              { "name": "logo css", "img": "/media/css.svg" },
-              { "name" : "logo javascript", "img":"/media/javascript.svg"},
-              { "name" : "logo wordpress", "img":"/media/wordpress.svg"}
-          ]
-        }
-    },
-    {
-      "id": 3,
-      "name": "Freelance - Maintenance and IT support of the Website csesmi.fr",
-      "mainImg":"/media/Accor.png",
-      "dates": "April 2021 - Now",
-      "description":" - Maintenance of the website and keeping it up to date.<- Creation of multiple articles<- IT support",
-      "skills": {
-        "skills_needed": [
-            { "name": "logo wordpress", "img": "/media/wordpress.svg" }
-        ]
-      }
-    }
+  },
 
-     
-  ]
+  {
+    "id": 2,
+    "name": "FullStack Developer (Internship)",
+    "mainImg": "/media/monthlee.png",
+    "dates": "May 2022 - September 2022 ",
+    "description": "- Creation of End-to-End test  <- Setting up Github actions, as to facilitate CI/CD<- Backend development in Ruby on Rails <- Front-end development in Angular / Typescript.<- Fully remote.<- Data-model improvements <- Product development.",
+    "skills": {
+      "skills_needed": [
+        { "name": "logo wordpress", "img": "/media/typescript.webp" },
+        { "name": "logo html", "img": "/media/ruby-on-rails.webp" },
+        { "name": "logo html", "img": "/media/angular.png" },
+        { "name": "logo html", "img": "/media/cypress.webp" },
+        { "name": "logo html", "img": "/media/github.svg" },
+        { "name": "logo wordpress", "img": "/media/logo-docker.webp" }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "Web developer and Project Manager ( Internship )",
+    "mainImg": "/media/Accor.png",
+    "dates": "February 2021 - April 2021",
+    "description": "- Study of the \"requirement needs\" <- Creation of the websites https://csesmi.fr/ and https://fo.csavigny.fr/<- Setting up an online shop<- Creation of an online file transfer solution.<- Training of the company's staff about the usage of the Website's fonctionnalities.<- Social Media manager for a week.<- Maintenance and IT support of the Website",
+    "skills": {
+      "skills_needed": [
+        { "name": "logo html", "img": "/media/html.svg" },
+        { "name": "logo css", "img": "/media/css.svg" },
+        { "name": "logo javascript", "img": "/media/javascript.svg" },
+        { "name": "logo wordpress", "img": "/media/wordpress.svg" }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Freelance - Maintenance and IT support of the Website csesmi.fr",
+    "mainImg": "/media/Accor.png",
+    "dates": "April 2021 - Now",
+    "description": " - Maintenance of the website and keeping it up to date.<- Creation of multiple articles<- IT support",
+    "skills": {
+      "skills_needed": [
+        { "name": "logo wordpress", "img": "/media/wordpress.svg" }
+      ]
+    }
+  }
+]
