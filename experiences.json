@@ -4,7 +4,7 @@
     "name": " FullStack Developer - Freelance",
     "mainImg": "/media/studyadvisor.svg",
     "dates": "September 2022 - Now",
-    "description": "- Handled business / technical and evolution related matters. <- Reworked the entire homepage  <- Reworking the entire registration system for users<- Actively resolved bug and provided technical support for employees <- Front-end development in Vue.js<- Fully remote.<- Data-model improvements <- Worked as the sole dev / tech person in the entire company for 6years <- Product development.",
+    "description": "- Handled business / technical and evolution related matters. <- Reworked the entire homepage  <- Reworking the entire registration system for users<- Actively resolved bug and provided technical support for employees <- Front-end development in Vue.js<- Fully remote.<- Data-model improvements <- Worked as the sole dev / tech person in the entire company for a few month. <- Product development.",
     "skills": {
       "skills_needed": [
         { "name": "logo html", "img": "/media/ruby-on-rails.webp" },
@@ -14,9 +14,22 @@
       ]
     }
   },
-
   {
     "id": 2,
+    "name": "Consultant, teacher and freelance developer for 4ACCB",
+    "dates": "September 2023 - Current ",
+    "description": "- Business model consultant <- Advised 4ACCB's client's team of young developers on architectural and technological choices. <- Taught young developers on the usage of the technologies, some tools and the codebase (that I sold to the company, in association with a partner).",
+    "skills": {
+      "skills_needed": [
+        { "name": "logo javascript", "img": "/media/javascript.svg" },
+        { "name": "logo html", "img": "/media/github.svg" },
+        { "name": "logo html", "img": "/media/html.svg" },
+        { "name": "logo wordpress", "img": "/media/css.svg" }
+      ]
+    }
+  },
+  {
+    "id": 3,
     "name": "FullStack Developer (Internship)",
     "mainImg": "/media/monthlee.png",
     "dates": "May 2022 - September 2022 ",
@@ -33,7 +46,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Web developer and Project Manager ( Internship )",
     "mainImg": "/media/Accor.png",
     "dates": "February 2021 - April 2021",
@@ -48,7 +61,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Freelance - Maintenance and IT support of the Website csesmi.fr",
     "mainImg": "/media/Accor.png",
     "dates": "April 2021 - Now",
