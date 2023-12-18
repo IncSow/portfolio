@@ -17,10 +17,10 @@ new Vue({
     this.getAllData();
   },
   methods: {
-    change_page(page) {
+    changePage(page) {
       this.page = page;
     },
-    toggle_skills(arg) {
+    toggleSkills(arg) {
       if (this.page == "skills") {
         this.isSoftSkills = arg;
       } else {
@@ -84,7 +84,7 @@ new Vue({
         current = current == obj.length - 1 ? 0 : current + 1;
       }
       document.getElementById(id).value = current + 1;
-      removeeffect(obj[current].description, description);
+      removeEffect(obj[current].description, description);
       this.isWorkExperience
         ? (this.current_experience = current)
         : (this.current_project = current);
@@ -100,14 +100,14 @@ new Vue({
       if (this.isWorkExperience) {
         this.current_experience =
           document.getElementById("experienceSelector").value - 1;
-        removeeffect(
+        removeEffect(
           this.experiences[this.current_experience].description,
           "experience_description"
         );
       } else {
         this.current_project =
           document.getElementById("projectSelector").value - 1;
-        removeeffect(
+        removeEffect(
           this.projects[this.current_project].description,
           "project_description"
         );

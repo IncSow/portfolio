@@ -26,7 +26,7 @@
             WebDev - Freelance - Paris
           </h1>
           <button
-            @click="change_page('main')"
+            @click="changePage('main')"
             class="text-center back-button"
             v-else
           >
@@ -37,7 +37,7 @@
         <section class="row me-0 me-lg-5 mt-4">
           <a
             class="col-12 centered"
-            onclick="go_to_page(this)"
+            onclick="goToPage(this)"
             data-link="https://github.com/IncSow"
           >
             <img
@@ -55,7 +55,7 @@
           class="centered candy unselectable"
           id="intro"
         >
-          <span @click="change_page('main')" id="play-span" class="centered">
+          <span @click="changePage('main')" id="play-span" class="centered">
             <img
               src="media/play-button.png"
               class="play-button"
@@ -69,7 +69,7 @@
           <div class="row centered">
             <transition name="come-left">
               <section
-                @click="change_page('skills')"
+                @click="changePage('skills')"
                 v-if="page == 'main'"
                 class="centered candy unselectable col-8 col-lg-3 flex-column"
               >
@@ -79,7 +79,7 @@
 
             <transition name="come-up">
               <section
-                @click="change_page('projects')"
+                @click="changePage('projects')"
                 v-if="page== 'main'"
                 class="centered candy unselectable col-8 col-lg-3 flex-column"
               >
@@ -89,7 +89,7 @@
 
             <transition name="come-right">
               <section
-                @click="change_page('about_me')"
+                @click="changePage('about_me')"
                 v-if="page=='main'"
                 class="centered candy unselectable col-8 col-lg-3 flex-column"
               >
@@ -103,7 +103,7 @@
           <footer v-if="page=='main'" id="contacts" class="centered mb-5">
             <div class="candy centered" onclick="CopyToClipboard()">
               <h3>Contact me:</h3>
-              <p class="email">helynt@dsifrance.fr</p>
+              <p class="email">lilo.incsow@gmail.com</p>
             </div>
           </footer>
         </transition>
@@ -117,14 +117,14 @@
               <button
                 class="button-rounded"
                 :class="{ activeButtonRounded: isWorkExperience==false }"
-                @click="toggle_skills(false)"
+                @click="toggleSkills(false)"
               >
                 Coding projects
               </button>
               <button
                 class="button-rounded"
                 :class="{ activeButtonRounded: isWorkExperience }"
-                @click="toggle_skills(true)"
+                @click="toggleSkills(true)"
               >
                 Professional experiences
               </button>
@@ -163,6 +163,7 @@
                     {{ projects[current_project].name }}
                   </h2>
                   <a
+                    v-if="projects[current_project].mainImg"
                     style="width: 40%"
                     :href="projects[current_project].link"
                     class="centered"
@@ -241,6 +242,7 @@
                     {{ experiences[current_experience].name }}
                   </h2>
                   <a
+                    v-if="experiences[current_experience].mainImg"
                     style="width: 40%"
                     :href="experiences[current_experience].link"
                     class="centered"
@@ -286,14 +288,14 @@
               <button
                 class="button-rounded"
                 :class="{ activeButtonRounded: isSoftSkills==false }"
-                @click="toggle_skills(false)"
+                @click="toggleSkills(false)"
               >
                 Hard skills
               </button>
               <button
                 class="button-rounded"
                 :class="{ activeButtonRounded: isSoftSkills }"
-                @click="toggle_skills(true)"
+                @click="toggleSkills(true)"
               >
                 Soft skills
               </button>

@@ -1,4 +1,4 @@
-function go_to_page(obj) {
+function goToPage(obj) {
   document.getElementById("background").style.backgroundColor = "black";
   document.body.classList.toggle("transitionning");
 
@@ -9,55 +9,50 @@ function go_to_page(obj) {
   setTimeout((location.href = obj.dataset.link), 3000);
 }
 
-function removeeffect(txt, text_to_change) {
-  document.getElementById(text_to_change).innerHTML = document
-    .getElementById(text_to_change)
+function removeEffect(txt, textToChange) {
+  document.getElementById(textToChange).innerHTML = document
+    .getElementById(textToChange)
     .innerHTML.replaceAll("</b>", "")
     .replaceAll("<b>", "");
-  let InputText = document.getElementById(text_to_change).innerHTML;
-  let maxrotation = InputText.length;
-  let speed = 500 / maxrotation;
-  for (let i = 0; i < maxrotation; i++) {
-    speed += 500 / maxrotation;
+  let InputText = document.getElementById(textToChange).innerHTML;
+  let maxRotation = InputText.length;
+  let speed = 500 / maxRotation;
+  for (let i = 0; i < maxRotation; i++) {
+    speed += 500 / maxRotation;
     setTimeout(() => {
-      InputText = document.getElementById(text_to_change).innerHTML;
-      document.getElementById(text_to_change).innerHTML = InputText.slice(
-        0,
-        -1
-      );
-      if (i == maxrotation - 1) {
-        typingeffect(txt, text_to_change);
+      InputText = document.getElementById(textToChange).innerHTML;
+      document.getElementById(textToChange).innerHTML = InputText.slice(0, -1);
+      if (i == maxRotation - 1) {
+        typewriterEffect(txt, textToChange);
       }
     }, speed);
   }
 }
 
-function typingeffect(txt, text_to_change) {
-  let bold_mode = false;
+function typewriterEffect(txt, textToChange) {
+  let boldMode = false;
   let speed = 500 / txt.length;
   for (let i = 0; i < txt.length; i++) {
     speed += 500 / txt.length;
     setTimeout(function () {
       if (txt.charAt(i) == "<") {
-        document.getElementById(text_to_change).innerHTML += "<br>";
+        document.getElementById(textToChange).innerHTML += "<br>";
       } else if (txt.charAt(i) == "+") {
-        bold_mode = true;
+        boldMode = true;
       } else if (txt.charAt(i) == "]") {
-        bold_mode = false;
-      } else if (bold_mode) {
-        document.getElementById(text_to_change).innerHTML += txt
-          .charAt(i)
-          .bold();
+        boldMode = false;
+      } else if (boldMode) {
+        document.getElementById(textToChange).innerHTML += txt.charAt(i).bold();
       } else {
-        document.getElementById(text_to_change).innerHTML += txt.charAt(i);
+        document.getElementById(textToChange).innerHTML += txt.charAt(i);
       }
     }, speed);
   }
 }
 
 function CopyToClipboard() {
-  var Text_to_copy = document.getElementsByClassName("email")[0].textContent;
-  navigator.clipboard.writeText(Text_to_copy);
+  var textToCopy = document.getElementsByClassName("email")[0].textContent;
+  navigator.clipboard.writeText(textToCopy);
   copied.style.display = "block";
   copied.style.opacity = 1;
   setTimeout(() => {

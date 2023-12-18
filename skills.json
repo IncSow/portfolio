@@ -1,70 +1,64 @@
 [
-    {
-      "id": 2,
-      "name": "HTML",
-      "img_url":"/media/html.svg"
-    },
-    {
-      "id": 3,
-      "name": "CSS",
-      "img_url":"/media/css.svg"
-    },
-    {
-      "id": 4,
-      "name": "JavaScript",
-      "img_url":"/media/javascript.svg"
-    },
-    {
-      "id": 11,
-      "name": "TypeScript",
-      "img_url":"/media/typescript.webp"
-    },
-    {
-      "id" : 10,
-      "name": "Angular",
-      "img_url":"/media/angular.png"
+  {
+    "id": 2,
+    "name": "HTML",
+    "img_url": "/media/html.svg"
   },
-    {
-      "id": 12,
-      "name": "Ruby on rails",
-      "img_url":"/media/ruby-on-rails.webp"
-    },
-    {
-      "id": 13,
-      "name": "Docker",
-      "img_url":"/media/logo-docker.webp"
-    },
-    {
-      "id": 14,
-      "name": "Linux",
-      "img_url":"/media/linux.webp"
-    },
-    {
-      "id": 15,
-      "name": "Cypress.io",
-      "img_url":"/media/cypress.webp"
-    },
-    {
-      "id": 5,
-      "name": "Vue.js 3",
-      "img_url":"/media/Vue-logo-1.png"
-    },
+  {
+    "id": 3,
+    "name": "CSS",
+    "img_url": "/media/css.svg"
+  },
+  {
+    "id": 4,
+    "name": "JavaScript",
+    "img_url": "/media/javascript.svg"
+  },
+  {
+    "id": 11,
+    "name": "TypeScript",
+    "img_url": "/media/typescript.webp"
+  },
+  {
+    "id": 10,
+    "name": "Angular",
+    "img_url": "/media/angular.png"
+  },
+  {
+    "id": 12,
+    "name": "Ruby on rails",
+    "img_url": "/media/ruby-on-rails.webp"
+  },
+  {
+    "id": 14,
+    "name": "Linux",
+    "img_url": "/media/linux.webp"
+  },
+  {
+    "id": 15,
+    "name": "Cypress.io",
+    "img_url": "/media/cypress.webp"
+  },
+  {
+    "id": 5,
+    "name": "Vue.js 3",
+    "img_url": "/media/Vue-logo-1.png"
+  },
 
   {
     "id": 7,
     "name": "GitHub",
-    "img_url":"/media/github.svg"
+    "img_url": "/media/github.svg"
   },
-    
-    
+
   {
-      "id" : 8,
-      "name": "SQLite",
-      "img_url":"/media/sqlite.png"
+    "id": 8,
+    "name": "SQLite",
+    "img_url": "/media/sqlite.png"
   },
   {
-      "id": 1,
-      "name": "Python",
-      "img_url":"/media/python.svg"
-    }    
-  ]
+    "id": 1,
+    "name": "Python",
+    "img_url": "/media/python.svg"
+  }
+]
