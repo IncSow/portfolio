@@ -21,7 +21,6 @@
     "description": "- Business model consultant <- Advised 4ACCB's client's team of young developers on architectural and technological choices. <- Taught young developers on the usage of the technologies, some tools and the codebase (that I sold to the company, in association with a partner).",
     "skills": {
       "skills_needed": [
-        { "name": "logo html", "img": "/media/ruby-on-rails.webp" },
         { "name": "logo javascript", "img": "/media/javascript.svg" },
         { "name": "logo html", "img": "/media/github.svg" },
         { "name": "logo html", "img": "/media/html.svg" },
